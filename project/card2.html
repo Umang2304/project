@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify- Web player:Music for everyone</title>
+    <link rel="icon" href="/assets/logo.png" />
+    <link rel="stylesheet" href="card1.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="main">
+      <div class="sidebar">
+        <div class="library">
+          <div class="options">
+            <div class="lib-option nav-option" styl>
+              <img src="./assets/library_icon.png" alt="" />
+              <a href="#">Your library</a>
+            </div>
+            <div class="icons">
+              <i class="fa-solid fa-plus"></i>
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+
+          <div class="lib-box">
+            <div class="box">
+              <p class="box-p1">Create your first playlist</p>
+              <p class="box-p2">It's easy, we'll help you</p>
+              <button class="badge">Create palylist</button>
+            </div>
+            <div class="box">
+              <p class="box-p1">Let's find some prodcast to follow</p>
+              <p class="box-p2">We keep you updated on new episods</p>
+              <button class="badge">Browse Prodcast</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-content">
+        <div class="sticky-nav">
+          <div class="sticky-nav-icons">
+            <img src="./assets/backward_icon.png" alt="" />
+            <img src="./assets/forward_icon.png" class="hide" />
+          </div>
+          <div class="sticky-nav-options">
+            <button class="badge nav-item hide">Explore Primium</button>
+            <button class="badge nav-item dark-badge">
+              <i
+                class="fa-regular fa-circle-down"
+                style="margin-right: 5px"
+              ></i>
+              Install App
+            </button>
+            <i class="fa-regular fa-user nav-item"></i>
+          </div>
+        </div>
+
+        <!-- <h2>Recently Played</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <a href="/album.html" target="_blank"
+                        style="border-radius: 0.5rem; background-color: rgb(13, 65, 107)"><img
+                            src="./assets/card1img.jpeg" alt="" class="card-img" /></a>
+                    <p class="card-title">Top 50 - Global</p>
+                    <p class="card-info">Your daily update of the most played tracks</p>
+                </div>
+            </div> -->
+        <h2>Recently Played</h2>
+        <div class="cards-container">
+          <div class="card">
+            <img
+              src="./assets/card7img.jpeg"
+              alt="Card Image"
+              class="card-img"
+            />
+            <div class="card-content">
+              <h2 class="card-title">GLORY</h2>
+              <p class="card-info">•
+               <span class="name">Yo Yo Honey Singh</span> 2024
+                •
+                18 songs
+                , 
+                56 min 29 sec</p>
+              
+            </div>
+          </div>
+        </div>
+        <div class="playlist-container">
+          <!-- Header Section -->
+          <div class="playlist-header">
+            <div class="header-left" >
+              <span>#</span>
+              <span>Title</span>
+            </div>
+            <div class="header-right">
+              <span>⏱️</span>
+            </div>
+          </div>
+          <!-- Tracks List -->
+          <div class="playlist">
+            <div class="track">
+              <div class="track-info">
+                <span class="track-number">1</span>
+                <div>
+                  <span class="title">Millionaire</span>
+                  <span class="artist">Yo Yo Honey Singh</span>
+                </div>
+              </div>
+              <span class="duration">3:19</span>
+            </div>
+            <div class="track">
+              <div class="track-info">
+                <span class="track-number">2</span>
+                <div>
+                  <span class="title">Jatt Mehka</span>
+                  <span class="artist">Yo Yo Honey Singh</span>
+                </div>
+              </div>
+              <span class="duration">3:15</span>
+            </div>
+            <div class="track">
+              <div class="track-info">
+                <span class="track-number">3</span>
+                <div>
+                  <span class="title">High On Me</span>
+                  <span class="artist">Yo Yo Honey Singh, Talwinder</span>
+                </div>
+              </div>
+              <span class="duration">2:55</span>
+            </div>
+            <div class="track">
+              <div class="track-info">
+                <span class="track-number">4</span>
+                <div>
+                  <span class="title">Fuck Them</span>
+                  <span class="artist">Yo Yo Honey Singh, Leo Grewal</span>
+                </div>
+              </div>
+              <span class="duration">3:50</span>
+            </div>
+            <div class="track">
+              <div class="track-info">
+                <span class="track-number">5</span>
+                <div>
+                  <span class="title">Bonita</span>
+                  <span class="artist">Yo Yo Honey Singh, THE SHAMS</span>
+                </div>
+              </div>
+              <span class="duration">2:58</span>
+            </div>
+            <div class="track">
+              <div class="track-info">
+                <span class="track-number">6</span>
+                <div>
+                  <span class="title">Hide It</span>
+                  <span class="artist">Yo Yo Honey Singh</span>
+                </div>
+              </div>
+              <span class="duration">3:04</span>
+            </div>
+            <div class="track">
+              <div class="track-info">
+                <span class="track-number">7</span>
+                <div>
+                  <span class="title">Hide It</span>
+                  <span class="artist">Yo Yo Honey Singh</span>
+                </div>
+              </div>
+              <span class="duration">3:04</span>
+            </div>
+            <div class="track">
+              <div class="track-info">
+                <span class="track-number">8</span>
+                <div>
+                  <span class="title">Hide It</span>
+                  <span class="artist">Yo Yo Honey Singh</span>
+                </div>
+              </div>
+              <span class="duration">3:04</span>
+            </div>
+            <div class="track">
+              <div class="track-info">
+                <span class="track-number">9</span>
+                <div>
+                  <span class="title">Hide It</span>
+                  <span class="artist">Yo Yo Honey Singh</span>
+                </div>
+              </div>
+              <span class="duration">3:04</span>
+            </div>
+            <div class="track">
+              <div class="track-info">
+                <span class="track-number">10</span>
+                <div>
+                  <span class="title">Hide It</span>
+                  <span class="artist">Yo Yo Honey Singh</span>
+                </div>
+              </div>
+              <span class="duration">3:04</span>
+            </div>
+            <div class="track">
+              <div class="track-info">
+                <span class="track-number">11</span>
+                <div>
+                  <span class="title">Hide It</span>
+                  <span class="artist">Yo Yo Honey Singh</span>
+                </div>
+              </div>
+              <span class="duration">3:04</span>
+            </div>
+            <div class="track">
+              <div class="track-info">
+                <span class="track-number">12</span>
+                <div>
+                  <span class="title">Hide It</span>
+                  <span class="artist">Yo Yo Honey Singh</span>
+                </div>
+              </div>
+              <span class="duration">3:04</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

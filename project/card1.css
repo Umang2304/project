@@ -1,0 +1,771 @@
+* {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    background-color: #121212;
+    color: #fff;
+    overflow: hidden;
+}
+
+.main {
+    display: flex;
+    height: 100vh;
+    padding: 0.5rem;
+
+}
+
+.sidebar {
+
+    width: 340px;
+    border-radius: 1rem;
+    margin-right: 0.5rem;
+}
+
+.main-content {
+    background-color: #121212;
+    flex: 1;
+    border-radius: 1rem;
+    overflow: auto;
+    padding: 0 1.5rem 0 1.5rem;
+}
+
+
+.music-player {
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    height: 72px;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav {
+    background-color: #121212;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100px;
+}
+
+.nav {
+    padding: 0.5rem 0.75rem;
+}
+
+.nav-option {
+    line-height: 2.4rem;
+    opacity: 0.7;
+    padding: 0.5rem 0.75rem;
+
+}
+
+.nav-option:hover {
+    opacity: 1;
+}
+
+.nav-option i {
+    font-size: 1.25em;
+}
+
+.nav-option a {
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+
+.library {
+    background-color: #121212;
+    border-radius: 1rem;
+    height: 100%;
+    margin-top: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    ;
+
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.lib-option img {
+    height: 1.25rem;
+    width: 1.25rem;
+
+}
+
+.icons {
+    font-size: 1.25rem;
+
+    display: flex;
+}
+
+.icons i {
+    opacity: 0.7;
+    margin-right: 1rem;
+}
+
+.icons i:hover {
+    opacity: 1;
+}
+
+.box {
+    height: 8rem;
+    background-color: #232323;
+    border-radius: 0.75rem;
+    margin: 0.5rem 0 1.75rem 0;
+    padding: 0.5rem 1rem;
+
+}
+
+.box-p1 {
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: #232323;
+    margin-bottom: 10px;
+}
+
+.box-p2 {
+    font-size: 0.85rem;
+    opacity: 0.9;
+    background-color: #232323;
+}
+
+.badge {
+    background-color: #fff;
+    color: black;
+    border: none;
+    border-radius: 100px;
+    padding: 0.25rem 1rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    height: 2rem;
+    width: fit-content;
+
+}
+
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    background-color: #121212;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0 1rem 0;
+    z-index: 10;
+}
+
+.sticky-nav-icons img {
+    margin-left: 0.75rem;
+}
+
+.sticky-nav-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.sticky-nav-options button {
+    margin-left: 0.5rem;
+}
+
+.nav-item {
+    margin-right: 1.5rem;
+}
+
+.dark-badge {
+    background-color: black;
+    color: white;
+}
+
+@media (max-width:1000px) {
+    .hide {
+        display: none;
+    }
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+    /* Ensure container spans full width */
+}
+
+.card {
+    /* background: linear-gradient(to bottom,rgb(120, 120, 120) ,rgb(84, 84, 84)); */
+    background-color: rgb(120, 120, 120);
+    /* Dark background to match Spotify theme */
+    color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: left;
+    width: 100%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+    display: flex;
+    gap: 1rem;
+    /* Space between image and text */
+}
+
+.card-img {
+    width: 250px;
+    /* Fixed width for better control */
+    height: 250px;
+    border-radius: 4px;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    /* background: linear-gradient(to bottom,rgb(120, 120, 120) ,rgb(84, 84, 84)); */
+    background-color: rgb(120, 120, 120);
+
+}
+
+.card-title {
+    font-size: 1.75rem;
+    /* Larger, bolder font */
+    font-weight: bold;
+    font-size: 80px;
+    background-color: rgb(120, 120, 120);
+    margin: 0;
+    margin-top: 100px;
+    font-weight: 900;
+}
+
+.card-info {
+    font-size: 1rem;
+    color: #b3b3b3;
+    /* Light gray for subtitle */
+    margin-top: 0.5rem;
+    background-color: rgb(120, 120, 120);
+
+}
+
+.name {
+    font-weight: 700;
+    background-color: rgb(120, 120, 120);
+
+}
+
+.name:hover {
+    text-decoration: underline;
+}
+
+/* palystic */
+
+/* styles.css */
+
+.playlist-container {
+    width: 100%;
+    background-color: #181818;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.playlist-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+
+    font-size: 14px;
+    color: #bbb;
+}
+
+.header-left span:first-child {
+    margin-right: 20px;
+}
+
+.header-right span {
+    font-size: 16px;
+
+}
+
+.playlist {
+    display: flex;
+    flex-direction: column;
+}
+
+.track {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #333;
+    transition: background-color 0.3s ease;
+}
+
+.track:last-child {
+    border-bottom: none;
+}
+
+.track:hover {
+    background-color: #333;
+    cursor: pointer;
+}
+
+.track-info {
+    display: flex;
+    align-items: center;
+}
+
+.track-number {
+    margin-right: 20px;
+    color: #bbb;
+    font-size: 16px;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.artist {
+    font-size: 14px;
+    color: #bbb;
+}
+
+.duration {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Button styling */
+.button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #1db954;
+    /* Spotify green */
+    color: white;
+    font-weight: bold;
+    border-radius: 24px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+
+.footer {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.line {
+    width: 90%;
+    height: 30%;
+    border-top: 1px solid white;
+    opacity: 0.4;
+}
+
+.music-player {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.album {
+    width: 25%;
+    display: flex;
+    background-color: black;
+}
+
+.heartimg {
+    margin: 5px;
+    width: 50px;
+    height: 55px;
+    border-radius: 5px;
+
+}
+
+.albumpara {
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    font-weight: 600;
+    opacity: 0.8;
+    background-color: black;
+
+}
+
+.albumpara:hover {
+    text-decoration: underline;
+    opacity: 1;
+}
+
+.player-control-icon-album {
+    height: 1rem;
+
+    opacity: 0.7;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    ;
+}
+
+.player-control-icon-album:hover {
+    opacity: 1;
+}
+
+.player {
+    width: 50%;
+
+}
+
+.controls {
+    width: 25%;
+    display: flex;
+    background-color: black;
+}
+
+.player-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player-control-icon {
+    height: 1rem;
+    margin-right: 1.75rem;
+    opacity: 0.7;
+    background-color: black;
+
+}
+
+.player-control-icon:hover {
+    opacity: 1;
+}
+
+/* Progress Container */
+.progress-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Centers the entire container */
+    gap: 10px;
+    width: 80%;
+    /* Adjust if needed */
+    margin: 0 auto;
+    /* Centers the container within the player */
+    margin-top: 10px;
+}
+
+.current-time,
+.duration {
+    color: white;
+    font-size: 0.8rem;
+}
+
+.player {
+    background-color: black;
+}
+
+/* Progress Bar */
+.progress-bar {
+    width: 100%;
+    appearance: none;
+    background-color: #000000;
+    color: black;
+    height: 4px;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+}
+
+.progress-bar::-webkit-slider-runnable-track {
+    height: 4px;
+    background-color: #535353;
+    border-radius: 4px;
+}
+
+.progress-bar::-webkit-slider-thumb {
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    background-color: #1db954;
+    border-radius: 50%;
+    margin-top: -4px;
+    /* Center thumb */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.progress-bar::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    background-color: #1db954;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.progress-bar::-ms-thumb {
+    width: 12px;
+    height: 12px;
+    background-color: #1db954;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.progress-bar:hover::-webkit-slider-thumb {
+    background-color: #1ed760;
+}
+
+/* Progress bar track */
+
+/* 
+.volume-bar::-webkit-slider-runnable-track{
+    appearance: none;
+    height:0.5rem;
+    width: 0.5rem;
+    background-color: #1bd760;
+    border-radius: 100px;
+     
+}
+
+.volume-bar {
+    appearance: none;
+   
+    height: 0.5rem; 
+    margin-top: 0.5rem;
+    
+    background-color: #1bd760; 
+    border-radius: 100px;
+    outline: none;
+}
+
+.volume-bar::-webkit-slider-runnable-track {
+    appearance: none;
+    height: 0.5rem; 
+    background-color: #1bd760;
+    border-radius: 100px;
+}
+
+
+.volume-bar::-webkit-slider-thumb {
+    appearance: none;
+    height: 1rem; 
+    width: 1rem;  
+    background-color: white; 
+    border-radius: 50%;
+    border: 2px solid #1bd760; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.volume-bar::-moz-range-thumb {
+    height: 1rem;
+    width: 1rem;
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid #1bd760;
+    cursor: pointer;
+}
+
+
+
+ */
+
+/* General styling for the volume bar */
+.volume-bar {
+    appearance: none;
+    height: 0.5rem;
+    background-color: #d1d1d1;
+    /* Track background color */
+    border-radius: 100px;
+    outline: none;
+    margin-top: 0.5rem;
+}
+
+/* Track styling for WebKit browsers */
+.volume-bar::-webkit-slider-runnable-track {
+    height: 0.5rem;
+    background-color: #1bd760;
+    border-radius: 100px;
+}
+
+/* Thumb styling for WebKit browsers */
+.volume-bar::-webkit-slider-thumb {
+    appearance: none;
+    height: 1rem;
+    width: 1rem;
+    background-color: white;
+    border: 2px solid #1bd760;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: -0.25rem;
+    /* Aligns thumb with the track */
+}
+
+/* Track styling for Firefox */
+.volume-bar::-moz-range-track {
+    height: 0.5rem;
+    background-color: #1bd760;
+    border-radius: 100px;
+}
+
+/* Thumb styling for Firefox */
+.volume-bar::-moz-range-thumb {
+    height: 1rem;
+    width: 1rem;
+    background-color: white;
+    border: 2px solid #1bd760;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: -0.25rem;
+    /* Aligns thumb with the track */
+}
+
+/* Track styling for Edge/IE */
+.volume-bar::-ms-track {
+    height: 0.5rem;
+    background-color: #1bd760;
+    border-radius: 100px;
+    border-color: transparent;
+    /* Removes IE border */
+    color: transparent;
+    /* Removes IE color */
+}
+
+/* Thumb styling for Edge/IE */
+.volume-bar::-ms-thumb {
+    height: 1rem;
+    width: 1rem;
+    background-color: white;
+    border: 2px solid #1bd760;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: -0.25rem;
+    /* Aligns thumb with the track */
+}
+
+/* Hover effect for thumb on all browsers */
+.volume-bar::-webkit-slider-thumb:hover,
+.volume-bar::-moz-range-thumb:hover,
+.volume-bar::-ms-thumb:hover {
+    background-color: #f0f0f0;
+}
+/* Loader Styles */
+/* .loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 9999;
+  }
+  
+  .spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(0, 0, 0, 0.1);
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .hidden {
+    display: none;
+  } */
+
+  .loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+  }
+  
+  .spinner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80px;
+  }
+  
+  .dot {
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    background-color: #1db954; /* Spotify Green */
+    border-radius: 50%;
+
+    animation: bounce 1.5s infinite;
+  }
+  
+  .dot:nth-child(1) {
+    animation-delay: 0s;
+  }
+  .dot:nth-child(2) {
+    animation-delay: 0.3s;
+  }
+  .dot:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+  
+  @keyframes bounce {
+    0%, 80%, 100% {
+      transform: scale(0);
+      
+    }
+    40% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Content Styles */
+  .content-container {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .hidden {
+    display: none;
+  }
