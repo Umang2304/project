@@ -59,10 +59,13 @@
         </div>
 
         <div class="main-content">
-            <div class="sticky-nav">
-                <div class="sticky-nav-icons">
-                    <img src="./assets/backward_icon.png" alt="" />
-                    <img src="./assets/forward_icon.png" class="hide" />
+            <!-- <div class="sticky-nav">
+                <div class="search-bar">
+                    <div class="search-input-container">
+                        <i class="search-icon"></i>
+                        <input type="text" placeholder="What do you want to play?" />
+                        <i class="search-button-icon"></i>
+                      </div>
                 </div>
                 <div class="sticky-nav-options">
                     <button class="badge nav-item hide">Explore Primium</button>
@@ -70,10 +73,34 @@
                         <i class="fa-regular fa-circle-down" style="margin-right: 5px"></i>
                         Install App
                     </button>
-                    <i class="fa-regular fa-user nav-item"></i>
+                    <i class="fa-regular fa-user nav-item" style="margin-top: 1.5rem;"></i>
+                </div>
+            </div> -->
+            <div class="sticky-nav">
+                <!-- Left Section -->
+                <div class="nav-left">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_logo_with_text.svg"
+                        alt="Spotify Logo" />
+
+                </div>
+
+                <!-- Center Section -->
+                <div class="search-bar">
+                    <div class="search-input-container">
+                        <i class="search-icon"></i>
+                        <input type="text" placeholder="What do you want to play?"  style=" border-right: 1px solid white; "/>
+                        
+                        <i class="search-button-icon"></i>
+
+                    </div>
+                </div>
+
+                <!-- Right Section -->
+                <div class="nav-right">
+                    <button class="signup">Sign up</button>
+                    <button>Log in</button>
                 </div>
             </div>
-
             <h2>Recently Played</h2>
             <div class="cards-container">
                 <div class="card">
@@ -296,46 +323,14 @@
     </div>
     <div id="loader" class="loader-container">
         <div class="spinner">
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
         </div>
-      </div>
-    <script>
-        const musicImage = document.getElementById("musicImage");
-        const music = document.getElementById("music");
+    </div>
+   
+<script src="app.js"></script>
 
-        musicImage.addEventListener("click", () => {
-            music.paused ? music.play() : music.pause();
-        });
-        // Simulate loading and navigation
-        function navigateToPage2() {
-            const loader = document.getElementById("loader");
-            const content = document.getElementById("content");
-
-            // Show loader and hide content
-            loader.style.display = "flex";
-            content.style.display = "none";
-
-            // Navigate to Page 2 after a delay
-            setTimeout(() => {
-                window.location.href = "card1.html"; // Redirect to Page 2
-            }, 2000); // Adjust delay as needed
-        }
-
-        // Initial loader simulation for Page 1
-        window.onload = () => {
-            const loader = document.getElementById("loader");
-            const content = document.getElementById("content");
-
-            // Simulate loading delay
-            setTimeout(() => {
-                loader.style.display = "none";
-                content.style.display = "block";
-            }, 1500);
-        };
-
-    </script>
 </body>
 
 </html>
