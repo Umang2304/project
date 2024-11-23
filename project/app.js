@@ -34,10 +34,12 @@ window.onload = () => {
 const searchInput = document.querySelector('.search-input-container input');
 const body = document.querySelector('body');
 
+// Add a class to the body when the search bar is focused
 searchInput.addEventListener('focus', () => {
     body.classList.add('dimmed');
 });
 
+// Remove the class when the search bar loses focus
 searchInput.addEventListener('blur', () => {
     body.classList.remove('dimmed');
 });
